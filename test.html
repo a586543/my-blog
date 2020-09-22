@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function Ab(callback) {
+            callback();
+            console.log('我是主函数');
+        }
+
+        //定义回调函数
+        function B() {
+            setTimeout("console.log('我是回调函数')", 3000);//模仿耗时操作  
+        }
+
+        //调用主函数，将函数B传进去
+        Ab(B);
+    </script>
+</body>
+
+</html>
